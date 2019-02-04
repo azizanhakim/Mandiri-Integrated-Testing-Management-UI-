@@ -25,8 +25,8 @@ export class NewCategoryDeviceComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      'name': this._formBuilder.control(''),
-      'description': this._formBuilder.control('')
+      'category_name': this._formBuilder.control(''),
+      'category_description': this._formBuilder.control('')
     });
   }
 

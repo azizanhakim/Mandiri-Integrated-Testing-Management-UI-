@@ -1,0 +1,33 @@
+<div class="animated fadeIn">
+  <div class="card">
+    <div class="card-header">
+      <strong>{{'master.conditionDevice.updated.title' | translate}}</strong>
+    </div>
+    <form [formGroup]="form" (submit)="send($event)">
+      <div class="card-body">        
+        <div class="form-group row col-md-12">
+          <label for="status" class="col-md-2 col-form-label">{{'master.conditionDevice.updated.name' | translate}}*</label>
+          <div class="col-md-9">
+            <input formControlName="status" type="text" name="status" id="status" class="col-md-3 form-control"
+                   required [ngClass]="{'is-invalid': f.status.errors && submitted}">
+            <div *ngIf="f.status.errors && submitted" class="invalid invalid-feedback">
+              <div *ngIf="f.status.errors.required">
+                Status is required.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-center">
+        <button type="reset" class="btn btn-yellow">
+          <i class="fa fa-repeat"></i>
+          {{'button.buttonReset' | translate}}
+        </button>&nbsp;
+        <button type="submit" class="btn btn-primary">
+          <i class="fa fa-save"></i>
+          {{'button.buttonUpdate' | translate}}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

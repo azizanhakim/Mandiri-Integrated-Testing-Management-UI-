@@ -32,7 +32,7 @@ export class ListBrandDeviceComponent implements OnInit, AfterViewInit {
     const that = this;
     this.searchBox = new FormGroup(
       {
-        'name': this._formBuilder.control('')
+        'brand_name': this._formBuilder.control('')
       }
     );
 
@@ -59,11 +59,11 @@ export class ListBrandDeviceComponent implements OnInit, AfterViewInit {
         });
       },
       columns: [
-        {data: 'id', title: 'ID'},
-        {data: 'name', title: 'Name'},
-        {data: 'description', title: 'Description'},
+        {data: 'brand_id', title: 'ID'},
+        {data: 'brand_name', title: 'Name'},
+        {data: 'brand_description', title: 'Description'},
         {
-          data: 'id',
+          data: 'brand_id',
           title: 'Action',
           orderable: false,
           render: (data: any, type: any, row: any, meta) => {
@@ -77,10 +77,10 @@ export class ListBrandDeviceComponent implements OnInit, AfterViewInit {
       ],
       rowCallback: (row: Node, data: BrandDevice, index: number) => {
         $('button#action-update', row).click(() => {
-          this._router.navigate(['master', 'brand-device', data.id]);
+          this._router.navigate(['master', 'brand-device', data.brand_id]);
         });
         $('button#action-remove', row).click(() => {
-          this.idDelete = data.id;
+          this.idDelete = data.brand_id;
           document.getElementById('openModal').click();
         });
         return row;

@@ -3,7 +3,7 @@ import {Router} from '@angular/router';
 import {ToastrService} from 'ngx-toastr';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {BrandDeviceService} from '../brand-device.service';
-import {BrandDevice} from '../../../../entity/brand-device.model';
+import {BrandDevice} from '../../../../entity/brand-device.model'; 
 
 @Component({
   selector: 'app-new-brand-device',
@@ -25,8 +25,8 @@ export class NewBrandDeviceComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      'name': this._formBuilder.control(''),
-      'description': this._formBuilder.control('')
+      'brand_name': this._formBuilder.control(''),
+      'brand_description': this._formBuilder.control('')
     });
   }
 

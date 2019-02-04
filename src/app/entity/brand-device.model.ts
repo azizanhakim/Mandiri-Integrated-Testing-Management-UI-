@@ -1,7 +1,7 @@
 export class BrandDevice {
 
-    public id: number;
-    public name: string;
-    public description: string;
+    public brand_id: number;
+    public brand_name: string;
+    public brand_description: string;
   }
   

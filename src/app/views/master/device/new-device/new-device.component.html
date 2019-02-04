@@ -1,0 +1,118 @@
+<div class="animated fadeIn">
+  <div class="card">
+    <div class="card-header">
+      <strong>{{'master.Device.new.title' | translate}}</strong>
+    </div>
+    <form [formGroup]="form" (submit)="send($event)">
+      <div class="card-body">
+        <div class="form-group row col-md-12">
+          <label for="name" class="col-md-2 col-form-label">{{'master.Device.new.name' | translate}}
+            *</label>
+          <div class="col-md-9">
+            <input formControlName="name" type="text" name="name" id="name" class="col-md-3 form-control"
+                   required [ngClass]="{'is-invalid': f.name.errors && submitted}">
+            <div *ngIf="f.name.errors && submitted" class="invalid invalid-feedback">
+              <div *ngIf="f.name.errors.required">
+                Name is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row col-md-12">
+          <label for="code" class="col-md-2 col-form-label">{{'master.Device.new.category_id' | translate}}
+            *</label>
+          <div class="col-md-9">
+            <input formControlName="category_name" type="text" name="category_name" id="category_name"
+                   class="col-md-3 form-control"
+                   required [ngClass]="{'is-invalid': f.category_name.errors && submitted}">
+            <div *ngIf="f.category_name.errors && submitted" class="invalid invalid-feedback">
+              <div *ngIf="f.category_name.errors.required">
+                Category of Device is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row col-md-12">
+          <label for="color_name" class="col-md-2 col-form-label">{{'master.Device.new.color_id' | translate}}
+            *</label>
+          <div class="col-md-9">
+            <input formControlName="color_name" type="text" name="color_name" id="color_name"
+                   class="col-md-3 form-control"
+                   required [ngClass]="{'is-invalid': f.color_name.errors && submitted}">
+            <div *ngIf="f.color_name.errors && submitted" class="invalid invalid-feedback">
+              <div *ngIf="f.color_name.errors.required">
+                Color of Device is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row col-md-12">
+          <label for="brand_name" class="col-md-2 col-form-label">{{'master.Device.new.brand_id' | translate}}
+            *</label>
+          <div class="col-md-9">
+            <input formControlName="brand_name" type="text" name="brand_name" id="brand_name"
+                   class="col-md-3 form-control"
+                   required [ngClass]="{'is-invalid': f.brand_name.errors && submitted}">
+            <div *ngIf="f.brand_name.errors && submitted" class="invalid invalid-feedback">
+              <div *ngIf="f.brand_name.errors.required">
+                Brand of Device is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row col-md-12">
+          <label for="condition_status" class="col-md-2 col-form-label">{{'master.Device.new.condition_id' | translate}}
+            *</label>
+          <div class="col-md-9">
+            <input formControlName="condition_status" type="text" name="condition_status" id="condition_status"
+                   class="col-md-3 form-control"
+                   required [ngClass]="{'is-invalid': f.condition_status.errors && submitted}">
+            <div *ngIf="f.condition_status.errors && submitted" class="invalid invalid-feedback">
+              <div *ngIf="f.condition_status.errors.required">
+                Condition of Device is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row col-md-12">
+          <label for="unit_name" class="col-md-2 col-form-label">{{'master.Device.new.unit_id' | translate}}
+            *</label>
+          <div class="col-md-9">
+            <input formControlName="unit_name" type="text" name="unit_name" id="unit_name"
+                   class="col-md-3 form-control"
+                   required [ngClass]="{'is-invalid': f.unit_name.errors && submitted}">
+            <div *ngIf="f.unit_name.errors && submitted" class="invalid invalid-feedback">
+              <div *ngIf="f.unit_name.errors.required">
+                Unit of Device is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row col-md-12">
+          <label for="peminjaman_status" class="col-md-2 col-form-label">{{'master.Device.new.peminjaman_id' | translate}}
+            *</label>
+          <div class="col-md-9">
+            <input formControlName="peminjaman_status" type="text" name="peminjaman_status" id="peminjaman_status"
+                   class="col-md-3 form-control"
+                   required [ngClass]="{'is-invalid': f.peminjaman_status.errors && submitted}">
+            <div *ngIf="f.peminjaman_status.errors && submitted" class="invalid invalid-feedback">
+              <div *ngIf="f.peminjaman_status.errors.required">
+                Status Rent of Device is required.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-center">
+        <button type="reset" class="btn btn-yellow">
+          <i class="fa fa-repeat"></i>
+          {{'button.buttonReset' | translate}}
+        </button>&nbsp;
+        <button type="submit" class="btn btn-primary">
+          <i class="fa fa-save"></i>
+          {{'button.buttonSave' | translate}}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

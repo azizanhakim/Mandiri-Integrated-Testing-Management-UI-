@@ -6,27 +6,27 @@
     <form [formGroup]="form" (submit)="send($event)">
       <div class="card-body">
         <div class="form-group row col-md-12">
-          <label for="name" class="col-md-2 col-form-label">{{'master.brandDevice.new.name' | translate}}
+          <label for="brand_name" class="col-md-2 col-form-label">{{'master.brandDevice.new.brand_name' | translate}}
             *</label>
           <div class="col-md-9">
-            <input formControlName="name" type="text" name="name" id="name" class="col-md-3 form-control"
-                   required [ngClass]="{'is-invalid': f.name.errors && submitted}">
-            <div *ngIf="f.name.errors && submitted" class="invalid invalid-feedback">
-              <div *ngIf="f.name.errors.required">
+            <input formControlName="brand_name" type="text" name="brand_name" id="brand_name" class="col-md-3 form-control"
+                   required [ngClass]="{'is-invalid': f.brand_name.errors && submitted}">
+            <div *ngIf="f.brand_name.errors && submitted" class="invalid invalid-feedback">
+              <div *ngIf="f.brand_name.errors.required">
                 Name is required.
               </div>
             </div>
           </div>
         </div>
         <div class="form-group row col-md-12">
-          <label for="description" class="col-md-2 col-form-label">{{'master.brandDevice.new.description' | translate}}
+          <label for="brand_description" class="col-md-2 col-form-label">{{'master.brandDevice.new.description' | translate}}
             *</label>
           <div class="col-md-9">
-            <input formControlName="description" type="text" name="description" id="description"
+            <input formControlName="brand_description" type="text" name="brand_description" id="brand_description"
                    class="col-md-3 form-control"
-                   required [ngClass]="{'is-invalid': f.description.errors && submitted}">
-            <div *ngIf="f.description.errors && submitted" class="invalid invalid-feedback">
-              <div *ngIf="f.description.errors.required">
+                   required [ngClass]="{'is-invalid': f.brand_description.errors && submitted}">
+            <div *ngIf="f.brand_description.errors && submitted" class="invalid invalid-feedback">
+              <div *ngIf="f.brand_description.errors.required">
                 Description is required.
               </div>
             </div>

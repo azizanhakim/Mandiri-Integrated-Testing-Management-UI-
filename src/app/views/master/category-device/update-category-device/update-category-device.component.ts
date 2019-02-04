@@ -33,7 +33,7 @@ export class UpdateCategoryDeviceComponent implements OnInit, OnDestroy {
     });
 
     this.subcribeTopic = this._activeRoute.params.subscribe((params: Params) => {
-      const id = params['id'];
+      const id = params['category_id'];
       this._service.getChangeTypes(id).subscribe((response: any) => {
         if (response.status === 204) {
           this._router.navigate(['master', 'category-device']);
@@ -41,9 +41,9 @@ export class UpdateCategoryDeviceComponent implements OnInit, OnDestroy {
           const value: CategoryDevice = response.body;
           console.log(value);
           this.form.setValue({
-              'id': value.id,
-              'name': value.name,
-              'description': value.description
+              'category_id': value.category_id,
+              'category_name': value.category_name,
+              'category_description': value.category_description
             }
           );
         }

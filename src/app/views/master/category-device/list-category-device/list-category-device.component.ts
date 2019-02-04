@@ -32,7 +32,7 @@ export class ListCategoryDeviceComponent implements OnInit, AfterViewInit {
     const that = this;
     this.searchBox = new FormGroup(
       {
-        'name': this._formBuilder.control('')
+        'category_name': this._formBuilder.control('')
       }
     );
 
@@ -59,11 +59,11 @@ export class ListCategoryDeviceComponent implements OnInit, AfterViewInit {
         });
       },
       columns: [
-        {data: 'id', title: 'ID'},
-        {data: 'name', title: 'Name'},
-        {data: 'description', title: 'Description'},
+        {data: 'category_id', title: 'ID'},
+        {data: 'category_name', title: 'Name'},
+        {data: 'category_description', title: 'Description'},
         {
-          data: 'id',
+          data: 'category_id',
           title: 'Action',
           orderable: false,
           render: (data: any, type: any, row: any, meta) => {
@@ -77,10 +77,10 @@ export class ListCategoryDeviceComponent implements OnInit, AfterViewInit {
       ],
       rowCallback: (row: Node, data: CategoryDevice, index: number) => {
         $('button#action-update', row).click(() => {
-          this._router.navigate(['master', 'category-device', data.id]);
+          this._router.navigate(['master', 'category-device', data.category_id]);
         });
         $('button#action-remove', row).click(() => {
-          this.idDelete = data.id;
+          this.idDelete = data.category_id;
           document.getElementById('openModal').click();
         });
         return row;

@@ -42,10 +42,10 @@ export class UpdateDeviceColorComponent implements OnInit, OnDestroy {
           const value: DeviceColor = response.body;
           console.log(value);
           this.form.setValue({
-              'id': value.id,
-              'name': value.name,
-              'code': value.code,
-              'description': value.description
+              'id': value.color_id,
+              'name': value.color_name,
+              'code': value.color_code,
+              'description': value.color_description
             }
           );
         }

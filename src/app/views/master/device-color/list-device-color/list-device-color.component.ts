@@ -33,7 +33,7 @@ export class ListDeviceColorComponent implements OnInit {
     const that = this;
     this.searchBox = new FormGroup(
       {
-        'name': this._formBuilder.control('')
+        'color_name': this._formBuilder.control('')
       }
     );
     
@@ -60,12 +60,12 @@ export class ListDeviceColorComponent implements OnInit {
         });
       },
       columns: [
-        {data: 'id', title: 'ID'},
-        {data: 'name', title: 'Name'},
-        {data: 'code', title: 'Hex Color Code'},
-        {data: 'description', title: 'Description'},
+        {data: 'color_id', title: 'ID'},
+        {data: 'color_name', title: 'Name'},
+        {data: 'color_code', title: 'Hex Color Code'},
+        {data: 'color_description', title: 'Description'},
         {
-          data: 'id',
+          data: 'color_id',
           title: 'Action',
           orderable: false,
           render: (data: any, type: any, row: any, meta) => {
@@ -79,10 +79,10 @@ export class ListDeviceColorComponent implements OnInit {
       ],
       rowCallback: (row: Node, data: DeviceColor, index: number) => {
         $('button#action-update', row).click(() => {
-          this._router.navigate(['master', 'color-device', data.id]);
+          this._router.navigate(['master', 'color-device', data.color_id]);
         });
         $('button#action-remove', row).click(() => {
-          this.idDelete = data.id;
+          this.idDelete = data.color_id;
           document.getElementById('openModal').click();
         });
         return row;

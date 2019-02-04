@@ -6,24 +6,24 @@
     <form [formGroup]="form" (submit)="send($event)">
       <div class="card-body">
         <div class="form-group row col-md-12">
-          <label for="name" class="col-md-2 col-form-label">{{'master.categoryDevice.updated.name' | translate}}*</label>
+          <label for="category_name" class="col-md-2 col-form-label">{{'master.categoryDevice.updated.name' | translate}}*</label>
           <div class="col-md-9">
-            <input formControlName="name" type="text" name="name" id="name" class="col-md-3 form-control"
-                   required [ngClass]="{'is-invalid': f.name.errors && submitted}">
-            <div *ngIf="f.name.errors && submitted" class="invalid invalid-feedback">
-              <div *ngIf="f.name.errors.required">
+            <input formControlName="category_name" type="text" name="category_name" id="category_name" class="col-md-3 form-control"
+                   required [ngClass]="{'is-invalid': f.category_name.errors && submitted}">
+            <div *ngIf="f.category_name.errors && submitted" class="invalid invalid-feedback">
+              <div *ngIf="f.category_name.errors.required">
                 Name is required.
               </div>
             </div>
           </div>
         </div>
         <div class="form-group row col-md-12">
-          <label for="description" class="col-md-2 col-form-label">{{'master.categoryDevice.updated.description' | translate}}*</label>
+          <label for="category_description" class="col-md-2 col-form-label">{{'master.categoryDevice.updated.description' | translate}}*</label>
           <div class="col-md-9">
-            <input formControlName="description" type="text" name="description" id="description" class="col-md-3 form-control"
-                   required [ngClass]="{'is-invalid': f.description.errors && submitted}">
-            <div *ngIf="f.description.errors && submitted" class="invalid invalid-feedback">
-              <div *ngIf="f.description.errors.required">
+            <input formControlName="category_description" type="text" name="category_description" id="category_description" class="col-md-3 form-control"
+                   required [ngClass]="{'is-invalid': f.category_description.errors && submitted}">
+            <div *ngIf="f.category_description.errors && submitted" class="invalid invalid-feedback">
+              <div *ngIf="f.category_description.errors.required">
                 Description is required.
               </div>
             </div>

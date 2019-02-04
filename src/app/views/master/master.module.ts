@@ -21,7 +21,23 @@ import { DeviceColorService } from './device-color/device-color.service';
 import { ListBrandDeviceComponent } from './brand-device/list-brand-device/list-brand-device.component';
 import { NewBrandDeviceComponent } from './brand-device/new-brand-device/new-brand-device.component';
 import { UpdateBrandDeviceComponent } from './brand-device/update-brand-device/update-brand-device.component';
-import { BrandDeviceService } from './brand-device/brand-device.service'
+import { BrandDeviceService } from './brand-device/brand-device.service';
+import { ListConditionDeviceComponent } from './condition-device/list-condition-device/list-condition-device.component';
+import { NewConditionDeviceComponent } from './condition-device/new-condition-device/new-condition-device.component';
+import { UpdateConditionDeviceComponent } from './condition-device/update-condition-device/update-condition-device.component'
+import {ConditionDeviceService} from './condition-device/condition-device.service';
+import { ListUnitDeviceComponent } from './unit-device/list-unit-device/list-unit-device.component';
+import { NewUnitDeviceComponent } from './unit-device/new-unit-device/new-unit-device.component';
+import { UpdateUnitDeviceComponent } from './unit-device/update-unit-device/update-unit-device.component';
+import { UnitDeviceService } from './unit-device/unit-device.service';
+import { ListDeviceComponent } from './device/list-device/list-device.component';
+import { NewDeviceComponent } from './device/new-device/new-device.component';
+import { UpdateDeviceComponent } from './device/update-device/update-device.component';
+import { ListStatusDeviceComponent } from './status-device/list-status-device/list-status-device.component';
+import { NewStatusDeviceComponent } from './status-device/new-status-device/new-status-device.component';
+import { UpdateStatusDeviceComponent } from './status-device/update-status-device/update-status-device.component';
+import { StatusDeviceService } from './status-device/status-device.service';
+import { DeviceService } from './device/device.service';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -55,7 +71,19 @@ export function HttpLoaderFactory(http: HttpClient) {
     UpdateDeviceColorComponent,
     ListBrandDeviceComponent,
     NewBrandDeviceComponent,
-    UpdateBrandDeviceComponent
+    UpdateBrandDeviceComponent,
+    ListConditionDeviceComponent,
+    NewConditionDeviceComponent,
+    UpdateConditionDeviceComponent,
+    ListUnitDeviceComponent,
+    NewUnitDeviceComponent,
+    UpdateUnitDeviceComponent,
+    ListDeviceComponent,
+    NewDeviceComponent,
+    UpdateDeviceComponent,
+    ListStatusDeviceComponent,
+    NewStatusDeviceComponent,
+    UpdateStatusDeviceComponent
   ], providers: [
     {
       provide: HTTP_INTERCEPTORS,
@@ -64,7 +92,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     },
     CategoryDeviceService,
     DeviceColorService,
-    BrandDeviceService
+    BrandDeviceService,
+    ConditionDeviceService,
+    UnitDeviceService,
+    StatusDeviceService,
+    DeviceService
   ]
 })
 export class MasterModule {

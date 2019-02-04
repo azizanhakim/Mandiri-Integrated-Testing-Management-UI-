@@ -15,14 +15,14 @@
         <form [formGroup]="searchBox" (submit)="refresh($event)">
           <div class="row">
             <div class="form-group col-md-7">
-              <label for="name">
+              <label for="color_name">
                 {{'master.colorDevice.list.searchLable' | translate}}
               </label>
             </div>
             <div class="form-group col-md-7">
               <div class="row">
                 &nbsp;&nbsp;&nbsp;
-                <input class="form-control col-sm-5" type="text" name="name" id="name" formControlName="name">
+                <input class="form-control col-sm-5" type="text" name="color_name" id="color_name" formControlName="color_name">
                 <button type="submit" class="btn btn-primary col-sm-2">
                   <i class="fa fa-search"></i> {{'button.buttonSearch' | translate}}
                 </button>

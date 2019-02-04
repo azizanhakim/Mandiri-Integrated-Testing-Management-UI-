@@ -127,15 +127,92 @@
       },
       "new": {
         "title": "A brand of Device",
-        "name": "Name",
-        "code": "Hex Color Code",
+        "brand_name": "Brand Name",
         "description": "Description"
       },
       "updated": {
         "title": "A brand of Device",
         "id": "ID",
-        "name": "Name",
-        "code": "Hex Color Code",
+        "brand_name": "Brand Name",
+        "description": "Description"
+      }
+    },
+    "conditionDevice": {
+      "list": {
+        "title": "Condition of device",
+        "searchLable": "Description"
+      },
+      "new": {
+        "title": "A condition of Device",
+        "name": "Status",
+        "description": "Description"
+      },
+      "updated": {
+        "title": "A condition of Device",
+        "id": "ID",
+        "name": "Status",
+        "description": "Description"
+      }
+    },
+    "unitDevice": {
+      "list": {
+        "title": "Unit of device",
+        "searchLable": "Description"
+      },
+      "new": {
+        "title": "A unit of Device",
+        "name": "Unit",
+        "description": "Description"
+      },
+      "updated": {
+        "title": "A unit of Device",
+        "id": "ID",
+        "name": "Unit",
+        "description": "Description"
+      }
+    },
+    "statusDevice": {
+      "list": {
+        "title": "Status of rent device",
+        "searchLable": "Description"
+      },
+      "new": {
+        "title": "A status of Rent Device",
+        "name": "Status of Rent",
+        "description": "Description"
+      },
+      "updated": {
+        "title": "A status of Rent Device",
+        "id": "ID",
+        "name": "Status of Rent",
+        "description": "Description"
+      }
+    },
+    "Device": {
+      "list": {
+        "title": "Device",
+        "searchLable": "Description"
+      },
+      "new": {
+        "title": "Device",
+        "name": "Name of Device",
+        "category_id": "Category of Device",
+        "color_id": "Color of Device",
+        "brand_id": "Brand of Device",
+        "condition_id": "Condition of Device",
+        "unit_id": "Unit of Device",
+        "peminjaman_id": "Status Rent of Device"
+      },
+      "updated": {
+        "title": "Device",
+        "id": "ID",
+        "name": "Name of Device",
+        "category_id": "Category of Device",
+        "color_id": "Color of Device",
+        "brand_id": "Brand of Device",
+        "condition_id": "Condition of Device",
+        "unit_id": "Unit of Device",
+        "peminjaman_id": "Status Rent of Device",
         "description": "Description"
       }
     }

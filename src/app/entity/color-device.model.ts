@@ -1,8 +1,7 @@
 export class DeviceColor {
 
-    public id: number;
-    public name: string;
-    public code: string;
-    public description: string;
+    public color_id: number;
+    public color_name: string;
+    public color_code: string;
+    public color_description: string;
   }
-  
